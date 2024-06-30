@@ -38,6 +38,12 @@ export const Navbar = () => {
       >
         Contáctanos
       </Link>
+      <Link
+        className={`${pathname === "/add-product" && "text-red-600"} hover:text-red-600 transition`}
+        to={"/AddProduct"}
+      >
+        Agregar Producto
+      </Link>
     </nav>
   );
 };

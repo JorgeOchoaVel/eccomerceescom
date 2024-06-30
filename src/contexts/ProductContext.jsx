@@ -14,6 +14,7 @@ const ProductProvider = ({ children }) => {
         title: item.prodTitle,
         description: item.prodDescription,
         price: item.prodPrice,
+        image: item.prodPath,
       }));
       setProducts(products);
     };

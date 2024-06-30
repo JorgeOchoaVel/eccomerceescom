@@ -5,3 +5,6 @@ export * from "./Hero"
 export * from "./Product"
 export * from "./Sidebar"
 export * from "./Navbar"
+export { default as AdminHero } from "./AdminHero"; 
+export { default as AdminHeader } from "./AdminHeader"; 
+export { default as AdminNavbar } from "./AdminNavbar"; 
