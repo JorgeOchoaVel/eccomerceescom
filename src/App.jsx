@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Páginas
-import { Home, ProductDetails, Products, About, Contact, Error } from "./pages";
+import { Home, ProductDetails, Products, About, Contact, Error, AddProduct } from "./pages";
 // Componentes
 import { Sidebar, Header, Footer } from "./components";
 
@@ -16,6 +16,7 @@ const App = () => {
             <Route path="/products" element={<Products />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/AddProduct" element={<AddProduct />} /> 
             <Route path="*" element={<Error />} />
           </Routes>
           <Sidebar />
