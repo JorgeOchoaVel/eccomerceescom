@@ -8,9 +8,9 @@ export const AdminNavbar = () => {
     <nav className="flex items-center gap-3 font-medium text-primary">
       <Link
         className={`${
-          pathname === "/admin" && "text-red-600"
+          pathname === "/admin/dashboard" && "text-red-600"
         } hover:text-red-600 transition`}
-        to={"/AdminDashboard"}
+        to={"/admin/dashboard"}
       >
         Inicio
       </Link>
@@ -18,7 +18,7 @@ export const AdminNavbar = () => {
         className={`${
           pathname === "/admin/products" && "text-red-600"
         } hover:text-red-600 transition`}
-        to={"/products"}
+        to={"/admin/products"}
       >
         Productos
       </Link>
@@ -26,7 +26,7 @@ export const AdminNavbar = () => {
         className={`${
           pathname === "/admin/users" && "text-red-600"
         } hover:text-red-600 transition`}
-        to={"/admin/users"} //AQUI VAN LOS USUARIOS
+        to={"/admin/users"}
       >
         Usuarios
       </Link>
@@ -34,15 +34,17 @@ export const AdminNavbar = () => {
         className={`${
           pathname === "/admin/orders" && "text-red-600"
         } hover:text-red-600 transition`}
-        to={"/admin/orders"} //AQUI VAN LAS ORDENES 
+        to={"/admin/orders"}
       >
         Órdenes
       </Link>
       <Link
-        className={`${pathname === "/admin/add-product" && "text-red-600"} hover:text-red-600 transition`}
-        to={"/AddProduct"}
+        className={`${
+          pathname === "/admin/categorias" && "text-red-600"
+        } hover:text-red-600 transition`}
+        to={"/admin/categorias"}
       >
-        Agregar Producto
+        Categorias
       </Link>
     </nav>
   );

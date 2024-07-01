@@ -1,12 +1,12 @@
 import { useContext } from "react";
 // context
-import { ProductContext } from "../contexts/ProductContext";
+import { AdminProductContext } from "../contexts/AdminProductContext";
 // componentes
 import { AdminHero, Product } from "../components";
 import { AdminHeader } from "../components/AdminHeader";
 
 export const AdminDashboard = () => {
-  const { products } = useContext(ProductContext);
+  const { products } = useContext(AdminProductContext);
 
   // Filtrando productos para categorías específicas, si es necesario
   const filteredProducts = products.filter(
