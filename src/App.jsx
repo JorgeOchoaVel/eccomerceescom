@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 // Páginas
-import { Home, ProductDetails, Products, About, Contact, Error, AddProduct, AdminDashboard } from "./pages";
+import { Home, ProductDetails, Products, About, Contact, Error, AddProduct, AdminDashboard, AdminProducts, EditProduct} from "./pages";
 // Componentes
 import { Sidebar, Header, Footer, AdminHeader } from "./components";
+import AdminProductProvider from "./contexts/AdminProductContext";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
 
 const Layout = () => {
   const location = useLocation();
-  const isAdminRoute = location.pathname.startsWith("/Admin");
+  const isAdminRoute = location.pathname.startsWith("/admin");
 
   return (
     <div className="overflow-hidden">
@@ -25,8 +26,10 @@ const Layout = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/AdminDashboard" element={<AdminDashboard />} />
-        <Route path="/AddProduct" element={<AddProduct />} />
+        <Route path="/admin/dashboard" element={<AdminProductProvider><AdminDashboard /></AdminProductProvider>} />
+        <Route path="/admin/products" element={<AdminProductProvider><AdminProducts /></AdminProductProvider>} />
+        <Route path="/admin/add-product" element={<AddProduct />} />
+        <Route path="/admin/edit-product/:id" element={<EditProduct />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Sidebar />

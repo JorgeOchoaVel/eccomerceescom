@@ -6,3 +6,5 @@ export * from "./Contact"
 export * from "./Error"
 export * from "./AdminDashboard"
 export { default as AddProduct } from "./AddProduct"; 
+export { default as AdminProducts } from "./AdminProducts";
+export { default as EditProduct } from "./EditProduct";
