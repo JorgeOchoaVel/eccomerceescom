@@ -6,6 +6,7 @@ import CartProvider from "./contexts/CartContext";
 import ProductProvider from "./contexts/ProductContext";
 import SidebarProvider from "./contexts/SidebarContext";
 import AdminProductProvider from "./contexts/AdminProductContext";
+import AdminCategoryProvider from "./contexts/AdminCategoryContext";
 
 
 import "./index.css";
@@ -15,10 +16,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <CartProvider>
       <ProductProvider>
       <AdminProductProvider>
+      <AdminCategoryProvider>
           <React.StrictMode>
             <App />
           </React.StrictMode>
-          </AdminProductProvider>
+          </AdminCategoryProvider>
+        </AdminProductProvider>
       </ProductProvider>
     </CartProvider>
   </SidebarProvider>
