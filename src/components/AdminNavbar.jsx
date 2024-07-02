@@ -40,9 +40,9 @@ export const AdminNavbar = () => {
       </Link>
       <Link
         className={`${
-          pathname === "/admin/categorias" && "text-red-600"
+          pathname === "/admin/categories" && "text-red-600"
         } hover:text-red-600 transition`}
-        to={"/admin/categorias"}
+        to={"/admin/categories"}
       >
         Categorias
       </Link>

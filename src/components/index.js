@@ -9,3 +9,4 @@ export { default as AdminHero } from "./AdminHero";
 export { default as AdminHeader } from "./AdminHeader"; 
 export { default as AdminNavbar } from "./AdminNavbar"; 
 export { default as AdminProduct } from "./AdminProduct";
+export { default as AdminCategory} from "./AdminCategory";
