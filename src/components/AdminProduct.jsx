@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AdminProductContext } from "../contexts/AdminProductContext";
 
 export const AdminProduct = ({ product }) => {
-  const { id, image, category, title, price } = product;
+  const { id, image, title, price } = product;
   const { deleteProduct } = useContext(AdminProductContext);
 
   const handleDelete = () => {
@@ -40,7 +40,6 @@ export const AdminProduct = ({ product }) => {
         </div>
       </div>
       <div>
-        <div className="text-sm capitalize text-gray-500 mb-1">{category}</div>
         <Link to={`/admin/product/${id}`}>
           <h2 className="font-semibold mb-1">{title}</h2>
         </Link>
