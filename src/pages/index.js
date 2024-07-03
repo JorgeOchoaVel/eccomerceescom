@@ -11,3 +11,5 @@ export { default as EditProduct } from "./EditProduct";
 export { default as AdminCategories } from "./AdminCategories";
 export { default as AddCategory } from "./AddCategory";
 export { default as EditCategory } from "./EditCategory";
+export { default as AdminUsers } from "./AdminUsers";
+export { default as MyUser } from "./Myuser";

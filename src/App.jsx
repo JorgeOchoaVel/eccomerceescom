@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 // Páginas
-import { Home, ProductDetails, Products, About, Contact, Error, AddProduct, AdminDashboard, AdminProducts, EditProduct, AdminCategories, AddCategory, EditCategory } from "./pages";
+import { Home, ProductDetails, Products, About, Contact, Error, AddProduct, AdminDashboard, AdminProducts, EditProduct, AdminCategories, AddCategory, EditCategory, AdminUsers, MyUser } from "./pages";
 // Componentes
 import { Sidebar, Header, Footer, AdminHeader } from "./components";
 import AdminProductProvider from "./contexts/AdminProductContext";
 import AdminCategoryProvider from "./contexts/AdminCategoryContext";
+import AdminUserProvider from "./contexts/AdminUserContext";
 
 const App = () => {
   return (
@@ -34,6 +35,8 @@ const Layout = () => {
         <Route path="/admin/categories" element={<AdminCategoryProvider><AdminCategories /></AdminCategoryProvider>} />
         <Route path="/admin/add-category" element={<AddCategory />} />
         <Route path="/admin/edit-category/:id" element={<EditCategory />} />
+        <Route path="/admin/users" element={<AdminUserProvider><AdminUsers /></AdminUserProvider>} />
+        <Route path="/admin/my-user" element={<MyUser />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Sidebar />
