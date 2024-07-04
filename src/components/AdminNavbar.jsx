@@ -46,6 +46,14 @@ export const AdminNavbar = () => {
       >
         Categorias
       </Link>
+      <Link
+        className={`${
+          pathname === "/admin/addresses" && "text-red-600"
+        } hover:text-red-600 transition`}
+        to={"/admin/addresses"}
+      >
+        Direcciones
+      </Link>
     </nav>
   );
 };
