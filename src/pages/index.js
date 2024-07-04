@@ -13,3 +13,5 @@ export { default as AddCategory } from "./AddCategory";
 export { default as EditCategory } from "./EditCategory";
 export { default as AdminUsers } from "./AdminUsers";
 export { default as MyUser } from "./Myuser";
+export { default as CartPage } from "./CartPage";
+export { default as PaymentPage} from "./PaymentPage"

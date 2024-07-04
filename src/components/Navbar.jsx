@@ -16,14 +16,6 @@ export const Navbar = () => {
       </Link>
       <Link
         className={`${
-          pathname === "/about" && "text-red-600"
-        } hover:text-red-600 transition`}
-        to={"/about"}
-      >
-        Nosotros
-      </Link>
-      <Link
-        className={`${
           pathname === "/products" && "text-red-600"
         } hover:text-red-600 transition`}
         to={"/products"}
@@ -38,12 +30,7 @@ export const Navbar = () => {
       >
         Contáctanos
       </Link>
-      <Link
-        className={`${pathname === "/add-product" && "text-red-600"} hover:text-red-600 transition`}
-        to={"/AddProduct"}
-      >
-        Agregar Producto
-      </Link>
+
     </nav>
   );
 };
