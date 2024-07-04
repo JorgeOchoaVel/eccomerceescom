@@ -10,3 +10,4 @@ export { default as AdminHeader } from "./AdminHeader";
 export { default as AdminNavbar } from "./AdminNavbar"; 
 export { default as AdminProduct } from "./AdminProduct";
 export { default as AdminCategory} from "./AdminCategory";
+export { default as AdminAddress} from "./AdminAddress";

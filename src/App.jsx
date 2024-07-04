@@ -1,11 +1,16 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 // Páginas
+<<<<<<< Updated upstream
 import { Home, ProductDetails, Products, About, Contact, Error, AddProduct, AdminDashboard, AdminProducts, EditProduct, AdminCategories, AddCategory, EditCategory, AdminUsers, MyUser, CartPage, PaymentPage} from "./pages";
+=======
+import { Home, ProductDetails, Products, About, Contact, Error, AddProduct, AdminDashboard, AdminProducts, EditProduct, AdminCategories, AddCategory, EditCategory, AdminUsers, MyUser, AdminAddresses } from "./pages";
+>>>>>>> Stashed changes
 // Componentes
 import { Sidebar, Header, Footer, AdminHeader } from "./components";
 import AdminProductProvider from "./contexts/AdminProductContext";
 import AdminCategoryProvider from "./contexts/AdminCategoryContext";
 import AdminUserProvider from "./contexts/AdminUserContext";
+import AdminAddressProvider from "./contexts/AdminAddressContext";
 
 const App = () => {
   return (
@@ -39,6 +44,7 @@ const Layout = () => {
         <Route path="/admin/edit-category/:id" element={<EditCategory />} />
         <Route path="/admin/users" element={<AdminUserProvider><AdminUsers /></AdminUserProvider>} />
         <Route path="/admin/my-user" element={<MyUser />} />
+        <Route path="/admin/addresses" element={<AdminAddressProvider><AdminAddresses /></AdminAddressProvider>} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Sidebar />

@@ -8,6 +8,7 @@ import SidebarProvider from "./contexts/SidebarContext";
 import AdminProductProvider from "./contexts/AdminProductContext";
 import AdminCategoryProvider from "./contexts/AdminCategoryContext";
 import AdminUserProvider from "./contexts/AdminUserContext";
+import AdminAddressProvider from "./contexts/AdminAddressContext";
 
 import "./index.css";
 
@@ -18,9 +19,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <AdminProductProvider>
       <AdminCategoryProvider>
       <AdminUserProvider>
+      <AdminAddressProvider>
           <React.StrictMode>
             <App />
           </React.StrictMode>
+      </AdminAddressProvider>
       </AdminUserProvider>
       </AdminCategoryProvider>
       </AdminProductProvider>
